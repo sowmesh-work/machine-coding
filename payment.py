@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from pricing_strategy import PricingStrategy
 
 class PaymentMethod(ABC):
     @abstractmethod
@@ -8,15 +7,15 @@ class PaymentMethod(ABC):
 
 class UPIPayment(PaymentMethod):
     def pay(self,amount):
-        print(f"paid{amount} through UPI")
+        print(f"Paid ₹{amount} through UPI")
         return True
 
 class CardPayment(PaymentMethod):
     def pay(self, amount):
-        print(f"paid{amount} through card")
+        print(f"Paid ₹{amount} through card")
         return True
 
 class CashPayment(PaymentMethod):
     def pay(self,amount):
-        print(f"paid{amount} through cash")
+        print(f"Paid ₹{amount} through cash")
         return True

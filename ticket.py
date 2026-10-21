@@ -20,5 +20,5 @@ class Ticket:
         if self.exit_time is None:
             raise ValueError("The vehicle is still parked")
         duration = self.exit_time - self.entry_time
-        hours = math.ceil(duration.total_seconds()/3600)
+        hours = max(1, math.ceil(duration.total_seconds()/3600))
         return hours

@@ -17,9 +17,9 @@ class ParkingSpot:
         return self.size
     
     def can_fit(self,vehicle:Vehicle):
-        if not self._is_available():
+        if not self.is_available():
             return False
-        return self.size != vehicle.get_size()
+        return self.size == vehicle.get_size()
 
     def park(self,vehicle:Vehicle):
         if not self.can_fit(vehicle):
